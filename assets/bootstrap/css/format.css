@@ -1,0 +1,27 @@
+.DivToScroll{   
+    background-color: #F5F5F5;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px 0 4px 0;
+    color: #3B3C3E;
+    font-size: 12px;
+    font-weight: bold;
+    left: -1px;
+    padding: 10px 7px 5px;
+}
+
+.projectseparate{
+    height:40px;
+}
+.DivWithScroll{
+    height:550px;
+    overflow:scroll;
+    overflow-x:hidden;
+}
+
+.bg-blue{
+    background-color: #001933;
+}
+
+.bg-ligthblue{
+    background-color: lightsteelblue;
+}
