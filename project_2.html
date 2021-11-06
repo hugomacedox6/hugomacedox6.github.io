@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-    <title>Binary to Decimal</title>
+    <title>Border radius Previewer</title>
     <!--/Css files start/-->
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/bootstrap/css/format.css">
@@ -13,7 +13,24 @@
     <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
     <!--/Css files end/-->
     <!--\\-->
-    <script src="js/project_1.js"></script>
+    <script src="js/project_2.js"></script>
+
+    <style type="text/css">
+        #bordercss {
+            height: 120px;
+            width: 120px;
+            background-color: black;
+            border-top-left-radius: 20%;
+            border-top-right-radius: 60%;
+            border-bottom-right-radius: 20%;
+            border-bottom-left-radius: 100%;
+        }
+
+        .textbox{
+            height: 105px;
+            width: 250px;
+        }
+    </style>
     <!--\\-->
 </head>
 
@@ -40,34 +57,49 @@
     <!--\\-->
     <div class="projectseparate bg-ligthblue"></div>
     <section id="portfolio" class="portfolio bg-ligthblue">
-        <h3 class="text-center">Binary to Decimal number converter
+        <h3 class="text-center">Border radius Previewer
             <hr class="star-dark mb-5">
         </h3>
         <div class="container">
-            <div class="row">
+            <div class="row text-center">
                 <!--\\-->
                 <!--/inicio div Project/-->
                 <!--\\-->
-                <div class="col-md-6 col-lg-4">
-                    <p>Binary Number</p>
-                    <input type="text" name="binary" id="binary" 
-                        onkeyup="this.value = this.value.replace(/[^0-1]/, '')">
+                <div class="col-md-6 col-lg-5">
+                    <label>Top Left</label>
+                    <input type="range" min="1" max="100" value="50" id="topleft" onchange="bordercss()">
+                    <br>
+                    <label>Top Rigth</label>
+                    <input type="range" min="1" max="100" value="50" id="toprigth" onchange="bordercss()">
+                    <br>
+                    <label>Bottom Rigth</label>
+                    <input type="range" min="1" max="100" value="50" id="bottomrigth" onchange="bordercss()">
+                    <br>
+                    <label>Bottom Left</label>
+                    <input type="range" min="1" max="100" value="50" id="bottomleft" onchange="bordercss()">
+                    <br>
+                </div>
+                <div class="col-md-6 col-lg-5" id="bordercss">
+
+                </div>
+                <div class="col-md-6 col-lg-5">
+                    <label>Height</label>
+                    <input type="range" min="100" max="200" value="120" id="heigth" onchange="bordercss()">
+                    <br>
+                    <label>Width</label>
+                    <input type="range" min="100" max="200" value="120" id="width" onchange="bordercss()">
+                </div>
+                <div>
+                    <br>
+                    <br>
+                    <textarea id="cssvalue" class="textbox"> </textarea>
+                    <br>
+                    <input type="button" value="Copy Text" onclick="copyclipboard()">
                 </div>
                 <!--\\-->
-                <div class="col-md-6 col-lg-4"></div>
-                <div class="col-md-6 col-lg-4">
-                    <p>Decimal Number</p>
-                    <input type="text" name="decimal" id="decimal"
-                        onkeyup="this.value = this.value.replace(/[^0-9]/, '')">
-                </div>
+                <!--/Fim div Project/-->
+                <!--\\-->
             </div>
-            <!--\\-->
-            <!--/Fim div Project/-->
-            <!--\\-->
-        </div>
-        <div class="text-center">
-            <input type="button" name="calcular" value="Calculate" onclick="calculate()">
-        </div>
     </section>
     <!--\\-->
     <div class="text-center text-white copyright py-4">
@@ -101,17 +133,19 @@
                                 <h2 class="text-uppercase text-secondary mb-0">History</h2>
                                 <hr class="star-dark mb-5">
                                 <!--\\-->
-                                <p class="mb-5">V.0.1 - Release 3/11/2021</p>
+                                <p class="mb-5">V.0.1 - Release 06/11/2021</p>
                                 <!--\\-->
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="modal-footer pb-5"><aclass="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Log</a></div>
+                <div class="modal-footer pb-5">
+                    <aclass="btn btn-primary btn-lg mx-auto rounded-pill portfolio-modal-dismiss" role="button"
+                        data-bs-dismiss="modal"><i class="fa fa-close"></i>&nbsp;Close Log</a>
+                </div>
             </div>
         </div>
     </div>
-    <!--\\-->
     <!--\End Project Log\-->
     <!--\\-->
     <!--/ Script js/-->
