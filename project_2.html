@@ -17,16 +17,16 @@
 
     <style type="text/css">
         #bordercss {
+            background-color: black;
             height: 120px;
             width: 120px;
-            background-color: black;
             border-top-left-radius: 20%;
             border-top-right-radius: 60%;
             border-bottom-right-radius: 20%;
             border-bottom-left-radius: 100%;
         }
 
-        .textbox{
+        .textbox {
             height: 105px;
             width: 250px;
         }
@@ -56,6 +56,7 @@
     <!--\End nav bar\-->
     <!--\\-->
     <div class="projectseparate bg-ligthblue"></div>
+     <!--\\-->
     <section id="portfolio" class="portfolio bg-ligthblue">
         <h3 class="text-center">Border radius Previewer
             <hr class="star-dark mb-5">
@@ -65,7 +66,7 @@
                 <!--\\-->
                 <!--/inicio div Project/-->
                 <!--\\-->
-                <div class="col-md-6 col-lg-5">
+                <div class="col-md-6 col-lg-4">
                     <label>Top Left</label>
                     <input type="range" min="1" max="100" value="50" id="topleft" onchange="bordercss()">
                     <br>
@@ -78,19 +79,27 @@
                     <label>Bottom Left</label>
                     <input type="range" min="1" max="100" value="50" id="bottomleft" onchange="bordercss()">
                     <br>
-                </div>
-                <div class="col-md-6 col-lg-5" id="bordercss">
-
-                </div>
-                <div class="col-md-6 col-lg-5">
+                    <br>
                     <label>Height</label>
                     <input type="range" min="100" max="200" value="120" id="heigth" onchange="bordercss()">
                     <br>
                     <label>Width</label>
                     <input type="range" min="100" max="200" value="120" id="width" onchange="bordercss()">
                 </div>
+                <!---->
+                <div class="col-md-6 col-lg-4">
+                    <center>
+                    <div id="bordercss">
+
+                    </div>
+                    </center>
+                </div>
+                <!---->
+                <div class="col-md-6 col-lg-4">
+
+                </div>
+                
                 <div>
-                    <br>
                     <br>
                     <textarea id="cssvalue" class="textbox"> </textarea>
                     <br>

@@ -7,8 +7,7 @@ function copyclipboard() {
    navigator.clipboard.writeText(textcopied.value);
 }
 
-function bordercss() {
-   //
+setInterval(function() {
    var width = document.getElementById("width").value + "px";
    var heigth = document.getElementById("heigth").value + "px";
    //
@@ -26,4 +25,5 @@ function bordercss() {
    document.getElementById("bordercss").style.borderBottomLeftRadius = bottomleft;
    //
    document.getElementById("cssvalue").value = "border-top-left-radius: " + topleft + "\n" + "border-top-right-radius: " + toprigth+"\n"+"border-bottom-right-radius:"+bottomrigth+"\n"+"border-bottom-left-radius:"+bottomleft;
-}
+}, 10);
+
